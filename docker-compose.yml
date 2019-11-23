@@ -5,6 +5,6 @@ services:
     volumes:
       - .:/code
       - ${DAHUA_PATH}:${DAHUA_PATH}
-    command: python ./code/dahua_camera_backup_manager.py ${DAHUA_PATH}
+    command: ${DAHUA_PATH}
     env_file:
       - .env
