@@ -1,0 +1,10 @@
+version: '3'
+services:
+  dahua_camera_backup_manager:
+    build: .
+    volumes:
+      - .:/code
+      - ${DAHUA_PATH}:${DAHUA_PATH}
+    command: python ./code/dahua_camera_backup_manager.py ${DAHUA_PATH}
+    env_file:
+      - .env
